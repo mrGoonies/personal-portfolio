@@ -167,4 +167,134 @@ main {
             }
         }
     }
+
+    .experience {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: #344e41;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #a3b18a;
+        }
+
+        .timeline {
+            margin: 5em auto;
+            max-width: 34.15em;
+
+            .checkpoint {
+                max-width: 34em;
+                padding-top: 2em;
+                padding-bottom: 2em;
+                position: relative;
+
+                .content {
+                    border: 2px solid #a3b18a;
+                    border-radius: 1em;
+                    padding: 1.5em;
+
+                    small {
+                        color: #dad7cd;
+                    }
+
+                    h2 {
+                        font-size: 1.8em;
+                        margin-top: 0.3em;
+                        margin-bottom: 0.5em;
+                        color: #a3b18a;
+                    }
+
+                    p {
+                        line-height: 27px;
+                        color: #dad7cd;
+                    }
+                }
+            }
+
+            .checkpoint:nth-child(odd) {
+                border-left: 3px solid #a3b18a;
+                padding-left: 3em;
+                transform: translateX(17em);
+            }
+
+            .checkpoint:nth-child(even) {
+                border-right: 3px solid #a3b18a;
+                padding-right: 3em;
+                transform: translateX(-17em);
+            }
+
+            .checkpoint:nth-child(odd)::before,
+            .checkpoint:nth-child(even)::before {
+                content: '';
+                background: #a3b18a;
+                width: 3em;
+                height: 3px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .checkpoint:nth-child(odd)::before {
+                left: 0.1%;
+            }
+
+            .checkpoint:nth-child(even)::before {
+                right: 0.1%;
+            }
+
+            .checkpoint:nth-child(odd) div::before,
+            .checkpoint:nth-child(even) div::before {
+                content: '';
+                background: #a3b18a;
+                box-shadow: 0 0 0 0.3em #344e41;
+                width: 1em;
+                height: 1em;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+            }
+
+            .checkpoint:nth-child(odd) div::before {
+                left: -0.5em;
+            }
+
+            .checkpoint:nth-child(even) div::before {
+                right: -0.5em;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    .timeline {
+        width: 80vw;
+    }
+
+    .timeline .checkpoint {
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+    .timeline .checkpoint::before {
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline .checkpoint div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
