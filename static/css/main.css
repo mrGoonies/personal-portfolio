@@ -141,6 +141,7 @@ main {
                     font-size: 2.5rem;
                     margin-bottom: 20px;
                     color: #344e41;
+                    font-weight: 800;
                 }
     
                 p {
@@ -182,6 +183,7 @@ main {
             margin-top: 3rem;
             margin-bottom: 3rem;
             color: #a3b18a;
+            font-weight: 800;
         }
 
         .timeline {
@@ -287,6 +289,7 @@ main {
             margin-top: 3rem;
             margin-bottom: 3rem;
             color: #3a5a40;
+            font-weight: 800;
         }
 
         .projects {
@@ -341,9 +344,88 @@ main {
                 }
             }
         }
-
-
     }
+
+    .find-me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: #344e41;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            color: #a3b18a;
+            font-weight: 800;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            .contact__left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                background-color: #3a5a40;
+                color: #dad7cd;
+                text-align: center;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                    font-weight: 700;
+                    color: #a3b18a
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #dad7cd;
+                    font-size: 1.2rem;
+                    border: 2px solid #dad7cd;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    transition: 0.3s;
+                    font-weight: 200;
+
+                }
+
+                a:hover {
+                    background-color: #dad7cd;
+                    color: #3a5a40;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #dad7cd;
+    color: #344e41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    margin-top: 20px;
+
+    p {
+        font-size: 1.2rem;
+    }
+
 }
 
 
